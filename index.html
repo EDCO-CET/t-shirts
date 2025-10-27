@@ -40,6 +40,44 @@
       <!-- Section products -->
       <section id="products">
         <h2>Our Products</h2>
+        <table>
+          <caption>
+            Products
+          </caption>
+          <thead>
+            <tr>
+              <th id="product">Product</th>
+              <th id="price">Price</th>
+              <th id="image">Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td headers="product">Classic White T-shirt</td>
+              <td headers="price">$19.99</td>
+              <td headers="image">
+                <img
+                  width="200"
+                  height="200"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM8ootvMuXS3fdCH-uSXsOA-pR3faMTzD9aOL2D7_7-p4VXXJtc5ArL09iK65JrR6Y6A&usqp=CAU"
+                  alt="Classic White T-shirt"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Classic Black T-shirt</td>
+              <td>$20.99</td>
+              <td>
+                <img
+                  width="200"
+                  height="200"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM8ootvMuXS3fdCH-uSXsOA-pR3faMTzD9aOL2D7_7-p4VXXJtc5ArL09iK65JrR6Y6A&usqp=CAU"
+                  alt="Classic Black T-shirt"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <article>
           <header>
             <h3>Classic White T-shirt</h3>
@@ -65,16 +103,100 @@
           <p>Price: $20.99</p>
         </article>
       </section>
-      <section>
-        <div>Block element</div>
-        <p>block element</p>
+      <section id="contact">
+        <h2>Contact</h2>
+        <label for="province">Provincia:</label>
+        <select id="province" multiple size="5" name="province">
+          <option value="">-- Selecciona una opción --</option>
+          <option value="madrid">Madrid</option>
+          <option value="barcelona">Barcelona</option>
+          <option value="valencia">Valencia</option>
+          <optgroup label="Andalucía">
+            <option value="sevilla">Sevilla</option>
+            <option value="malaga">Málaga</option>
+          </optgroup>
+        </select>
+        <form action="" method="get">
+          <label for="name">Name:</label><br />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your name here"
+            required
+          /><br />
 
-        <p>
-          Lorem ipsum <strong>dolor</strong> sit amet consectetur adipisicing
-          elit. Praesentium id sapiente debitis. Numquam tempora atque
-          accusamus, rem eaque optio cumque ipsum adipisci sit perferendis, hic
-          maxime? Omnis odio sapiente quas.
-        </p>
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your email here"
+            required
+          /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea
+            rows="4"
+            cols="50"
+            name="message"
+            id="message"
+            placeholder="Your message here"
+            required
+          ></textarea
+          ><br />
+          <label for="phone">Teléfono:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="^(\+34|0034)?[\s.-]?(\d{3}[\s.-]?){2}\d{3}$"
+            title="Debe ser un número de teléfono válido (9 dígitos)"
+            required
+          />
+
+          <!-- Grupo de casillas de verificación (checkboxes) -->
+          <label for="interests">Intereses:</label>
+          <input
+            type="checkbox"
+            id="interest_prog"
+            name="interests"
+            value="programming"
+          />
+          <label for="interest_prog">Programación</label>
+          <input
+            type="checkbox"
+            id="interest_webdesign"
+            name="interests"
+            value="web_design"
+          />
+          <label for="interest_webdesign">Diseño web</label>
+          <br /><br />
+          <!-- Grupo de botones de radio (radio buttons) -->
+          <label>Nivel de experiencia:</label>
+          <input
+            type="radio"
+            id="exp_beginner"
+            name="experience"
+            value="beginner"
+          />
+          <label for="exp_beginner">Principiante</label>
+          <input
+            type="radio"
+            id="exp_intermediate"
+            name="experience"
+            value="intermediate"
+          />
+          <label for="exp_intermediate">Intermedio</label>
+          <input
+            type="radio"
+            id="exp_advanced"
+            name="experience"
+            value="advanced"
+          />
+          <label for="exp_advanced">Avanzado</label>
+          <button type="submit">Send</button>
+        </form>
       </section>
       <aside>
         <h2>Comming soon</h2>
