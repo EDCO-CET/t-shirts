@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -22,7 +23,7 @@
         src="https://thebanyantee.com/cdn/shop/files/Black-T-shirt.jpg?v=17213803668"
         alt="T-shirt brand"
       />
-      <nav>
+      <nav class="nav">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
@@ -34,8 +35,10 @@
     <main>
       <!-- Section home -->
       <section id="home">
-        <h1>Welcome to Our T-shirt Store</h1>
-        <p>Discover our exclusive collection of T-shirts.</p>
+        <h1 style="color: blueviolet">Welcome to Our T-shirt Store</h1>
+        <p class="section-paragraph" id="home-paragraph">
+          Discover our exclusive collection of T-shirts.
+        </p>
       </section>
       <!-- Section products -->
       <section id="products">
@@ -103,7 +106,7 @@
           <p>Price: $20.99</p>
         </article>
       </section>
-      <section id="contact">
+      <section id="contact" class="section">
         <h2>Contact</h2>
         <label for="province">Provincia:</label>
         <select id="province" multiple size="5" name="province">
@@ -195,7 +198,7 @@
             value="advanced"
           />
           <label for="exp_advanced">Avanzado</label>
-          <button type="submit">Send</button>
+          <button class="button button-success" type="submit">Send</button>
         </form>
       </section>
       <aside>

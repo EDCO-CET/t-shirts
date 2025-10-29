@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Bitcount Grid Single', 'Roboto', sans-serif;
+}
+
+.nav {
+  background-color: #063e5f;
+  padding: 1rem;
+}
+
+.nav a {
+  color: white;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.button {
+  font-weight: 500;
+  color: white;
+  background-color: #063e5f;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #119dee;
+}
+
+.button-success {
+  background-color: #28a745;
+}
