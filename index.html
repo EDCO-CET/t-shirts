@@ -17,14 +17,14 @@
   </head>
   <body>
     <header>
-      <img
-        width="70"
-        height="70"
-        src="https://thebanyantee.com/cdn/shop/files/Black-T-shirt.jpg?v=17213803668"
-        alt="T-shirt brand"
-      />
       <nav class="nav">
-        <ul>
+        <img
+          width="70"
+          height="70"
+          src="https://thebanyantee.com/cdn/shop/files/Black-T-shirt.jpg?v=17213803668"
+          alt="T-shirt brand"
+        />
+        <ul class="nav__menu">
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Services</a></li>
@@ -32,10 +32,10 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <!-- Section home -->
       <section id="home">
-        <h1 style="color: blueviolet">Welcome to Our T-shirt Store</h1>
+        <h1 >Welcome to Our T-shirt Store</h1>
         <p class="section-paragraph" id="home-paragraph">
           Discover our exclusive collection of T-shirts.
         </p>
@@ -43,45 +43,8 @@
       <!-- Section products -->
       <section id="products">
         <h2>Our Products</h2>
-        <table>
-          <caption>
-            Products
-          </caption>
-          <thead>
-            <tr>
-              <th id="product">Product</th>
-              <th id="price">Price</th>
-              <th id="image">Image</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td headers="product">Classic White T-shirt</td>
-              <td headers="price">$19.99</td>
-              <td headers="image">
-                <img
-                  width="200"
-                  height="200"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM8ootvMuXS3fdCH-uSXsOA-pR3faMTzD9aOL2D7_7-p4VXXJtc5ArL09iK65JrR6Y6A&usqp=CAU"
-                  alt="Classic White T-shirt"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>Classic Black T-shirt</td>
-              <td>$20.99</td>
-              <td>
-                <img
-                  width="200"
-                  height="200"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM8ootvMuXS3fdCH-uSXsOA-pR3faMTzD9aOL2D7_7-p4VXXJtc5ArL09iK65JrR6Y6A&usqp=CAU"
-                  alt="Classic Black T-shirt"
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <article>
+        <div class="products__container">
+        <article class="product">
           <header>
             <h3>Classic White T-shirt</h3>
           </header>
@@ -92,8 +55,9 @@
             alt="Classic White T-shirt"
           />
           <p>Price: $19.99</p>
+          <button class="button">Add to cart</button>
         </article>
-        <article>
+        <article class="product">
           <header>
             <h3>Classic Black T-shirt</h3>
           </header>
@@ -104,6 +68,33 @@
             alt="Classic Black T-shirt"
           />
           <p>Price: $20.99</p>
+          <button class="button">Add to cart</button>
+        </article>
+        <article class="product">
+          <header>
+            <h3>Classic White T-shirt</h3>
+          </header>
+          <img
+            width="200"
+            height="200"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM8ootvMuXS3fdCH-uSXsOA-pR3faMTzD9aOL2D7_7-p4VXXJtc5ArL09iK65JrR6Y6A&usqp=CAU"
+            alt="Classic White T-shirt"
+          />
+          <p>Price: $19.99</p>
+          <button class="button">Add to cart</button>
+        </article>
+        <article class="product">
+          <header>
+            <h3>Classic Black T-shirt</h3>
+          </header>
+          <img
+            width="200"
+            height="200"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM8ootvMuXS3fdCH-uSXsOA-pR3faMTzD9aOL2D7_7-p4VXXJtc5ArL09iK65JrR6Y6A&usqp=CAU"
+            alt="Classic Black T-shirt"
+          />
+          <p>Price: $20.99</p>
+          <button class="button">Add to cart</button>
         </article>
       </section>
       <section id="contact" class="section">

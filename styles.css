@@ -9,31 +9,86 @@ html {
 }
 
 body {
-  font-family: 'Bitcount Grid Single', 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main {
+  padding: 2rem;
 }
 
 .nav {
-  background-color: #063e5f;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: #ffffff;
   padding: 1rem;
 }
 
 .nav a {
-  color: white;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
 .nav ul {
   list-style: none;
 }
 
+.nav__menu {
+  display: flex;
+  gap: 1rem;
+}
+
+#products {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.products__container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 15rem;
+  padding: 0.5rem;
+  border: 1px solid #e3e6e7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .button {
   font-weight: 500;
   color: white;
-  background-color: #063e5f;
+  background-color: #3f51b5;
   padding: 10px 20px;
   border-radius: 5px;
-  border: 1px solid #119dee;
+  border: 1px solid #3f51b5;
+  font-family: 'Roboto', sans-serif;
 }
 
 .button-success {
   background-color: #28a745;
+}
+
+/* media queries */
+
+@media screen and (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .products__container {
+    flex-direction: column;
+  }
 }
