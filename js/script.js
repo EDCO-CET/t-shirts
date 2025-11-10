@@ -1,20 +1,35 @@
-// Strings (cadenas de texto)
-let nombre = 'María De los angeles';
-let mensaje = 'Hola';
-let frase = `Este es un saludo: ${mensaje} ${nombre}`; // Template literal
-// Numbers (números)
-let entero = 42;
-let decimal = 3.14;
-let negativo = -10;
-// Booleans (valores lógicos)
-let esMayorDeEdad = true;
-let tieneDescuento = false;
-// undefined y null
-let noDefinido; // undefined automáticamente
-let valorVacio = null; // hay que asignarlo explícitamente
-// Object (objeto)
-let persona = {
-  nombre: 'Carlos',
-  edad: 25,
-  esEstudiante: true,
-};
+const buttonSubmitForm = document.getElementById('submit-form');
+
+buttonSubmitForm.addEventListener('click', () => {
+  alert('Formulario enviado');
+});
+const buttons = document.querySelectorAll('.product .button');
+buttons.forEach((button) => {
+  button.addEventListener('mouseover', () => {
+    button.style.backgroundColor = 'yellow';
+  });
+  button.addEventListener('mouseout', () => {
+    button.style.backgroundColor = 'var(--primary-color)';
+  });
+});
+
+const list = document.getElementById('list');
+const submitTask = document.getElementById('submit-task');
+const taskInput = document.getElementById('task-input');
+
+list.addEventListener('click', (event) => {
+  // Verificar si el clic fue en un LI
+  if (event.target.tagName === 'LI') {
+    // Marcar como completado
+    event.target.style.textDecoration = 'line-through';
+  }
+});
+
+submitTask.addEventListener('click', () => {
+  if (taskInput.value.trim() === '') return;
+  const nuevoLi = document.createElement('li');
+  nuevoLi.textContent = taskInput.value;
+
+  list.appendChild(nuevoLi);
+  taskInput.value = '';
+});
