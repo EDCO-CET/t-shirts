@@ -1,35 +1,126 @@
-const buttonSubmitForm = document.getElementById('submit-form');
+const products = [
+  {
+    name: 'Essential White Crew',
+    price: 19.99,
+    image:
+      'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=400&fit=crop&crop=center',
+    alt: 'Essential White Crew',
+  },
+  {
+    name: 'Midnight Black Tee',
+    price: 20.99,
+    image:
+      'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop&crop=center',
+    alt: 'Midnight Black Tee',
+  },
+  {
+    name: 'Minimalist V-Neck',
+    price: 19.99,
+    image:
+      'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&h=400&fit=crop&crop=center',
+    alt: 'Minimalist V-Neck',
+  },
+  {
+    name: 'Urban Street Style',
+    price: 20.99,
+    image:
+      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center',
+    alt: 'Urban Street Style',
+  },
+  {
+    name: 'Vintage Graphic Tee',
+    price: 24.99,
+    image:
+      'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop&crop=center',
+    alt: 'Vintage Graphic Tee',
+  },
+  {
+    name: 'Navy Striped Classic',
+    price: 22.99,
+    image:
+      'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop&crop=center',
+    alt: 'Navy Striped Classic',
+  },
+  {
+    name: 'Premium Cotton Tee',
+    price: 29.99,
+    image:
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop&crop=center',
+    alt: 'Premium Cotton Tee',
+  },
+  {
+    name: 'Tropical Print Tee',
+    price: 26.99,
+    image:
+      'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop&crop=center',
+    alt: 'Tropical Print Tee',
+  },
+  {
+    name: 'Long Sleeve Henley',
+    price: 32.99,
+    image:
+      'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop&crop=center',
+    alt: 'Long Sleeve Henley',
+  },
+  {
+    name: 'Organic Bamboo Tee',
+    price: 34.99,
+    image:
+      'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&h=400&fit=crop&crop=center',
+    alt: 'Organic Bamboo Tee',
+  },
+  {
+    name: 'Retro Band T-shirt',
+    price: 27.99,
+    image:
+      'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop&crop=center',
+    alt: 'Retro Band T-shirt',
+  },
+  {
+    name: 'Athletic Performance Tee',
+    price: 39.99,
+    image:
+      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center',
+    alt: 'Athletic Performance Tee',
+  },
+];
 
-buttonSubmitForm.addEventListener('click', () => {
-  alert('Formulario enviado');
-});
-const buttons = document.querySelectorAll('.product .button');
-buttons.forEach((button) => {
-  button.addEventListener('mouseover', () => {
-    button.style.backgroundColor = 'yellow';
+function createProductElement(product) {
+  const article = document.createElement('article');
+  article.classList.add('product');
+
+  const header = document.createElement('header');
+  const h3 = document.createElement('h3');
+  h3.textContent = product.name;
+  header.appendChild(h3);
+  article.appendChild(header);
+
+  const img = document.createElement('img');
+  img.src = product.image;
+  img.width = 200;
+  img.height = 200;
+  img.alt = product.alt;
+  article.appendChild(img);
+
+  const p = document.createElement('p');
+  p.textContent = `Price: $${product.price}`;
+  article.appendChild(p);
+
+  const button = document.createElement('button');
+  button.classList.add('button');
+  button.textContent = 'Add to cart';
+  article.appendChild(button);
+
+  return article;
+}
+
+function renderProducts() {
+  const productsContainer = document.querySelector('.products__container');
+
+  products.forEach((product) => {
+    const productElement = createProductElement(product);
+    productsContainer.appendChild(productElement);
   });
-  button.addEventListener('mouseout', () => {
-    button.style.backgroundColor = 'var(--primary-color)';
-  });
-});
+}
 
-const list = document.getElementById('list');
-const submitTask = document.getElementById('submit-task');
-const taskInput = document.getElementById('task-input');
-
-list.addEventListener('click', (event) => {
-  // Verificar si el clic fue en un LI
-  if (event.target.tagName === 'LI') {
-    // Marcar como completado
-    event.target.style.textDecoration = 'line-through';
-  }
-});
-
-submitTask.addEventListener('click', () => {
-  if (taskInput.value.trim() === '') return;
-  const nuevoLi = document.createElement('li');
-  nuevoLi.textContent = taskInput.value;
-
-  list.appendChild(nuevoLi);
-  taskInput.value = '';
-});
+document.addEventListener('DOMContentLoaded', renderProducts);
